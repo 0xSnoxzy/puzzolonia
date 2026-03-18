@@ -76,10 +76,10 @@
             const seed = new Date().toDateString();
             
             const prompt = `Agisci come Freakbait. Genera una missione 'Urban Side Quest'. Deve essere caotica, surreale, legale e sicura.
-            Esempi: "Quando te ne stai per andare da casa di un amico inizia a salutare ma poi continua ad aggiungere commenti così che il saluto diventi sempre più lungo, finché devi trasferirti là",
+            Esempi: "Quando te ne stai per andare da casa di un amico inizia a salutare ma poi continua ad aggiungere commenti così che il saluto diventi sempre più lungo",
             "Chiama un amico e appena risponde dici "Scusami sono un po' occupato ora, ti richiamo più tardi" e chiudi il telefono",
             "Avvicinati ad uno sconosciuto ed esclama "SEI TU! TI HO CERCATO OVUNQUE OGGI" e poi allontanati immediatamente"
-            Rispondi SOLO con un JSON: {"main": "missione principale (max 12 parole)", "side": ["sub-quest 1", "sub-quest 2"]}. 
+            Rispondi SOLO con un JSON: {"main": "missione principale (max 25 parole)", "side": ["sub-quest 1", "sub-quest 2"]}. 
             Seed temporale: ${seed}. Lingua: Italiano.`;
 
             try {
