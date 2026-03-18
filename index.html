@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URBAN SIDE QUESTS</title>
+    <title> SIDE QUESTS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
@@ -19,7 +19,7 @@
         <h2 class="text-2xl mb-4">IDENTIFICAZIONE UTENTE</h2>
         <p class="mb-4 text-sm opacity-70">INSERIRE TOKEN DI ACCESSO HUGGING FACE PER COLLEGARSI ALL'IA</p>
         <input type="password" id="api-key-input" placeholder="hf_xxxxxxxxxxxx" class="w-full mb-4 text-center">
-        <button onclick="saveKey()" class="bg-[#00ff41] text-black px-4 py-2 hover:bg-white transition">INIZIALIZZA SINCRO</button>
+        <button onclick="saveKey()" class="bg-[#00ff41] text-black px-4 py-2 hover:bg-white transition">INIZIALIZZA</button>
     </div>
 
     <div id="main-screen" class="max-w-2xl border-2 border-[#00ff41] p-8 relative z-10 bg-black shadow-[0_0_15px_rgba(0,255,65,0.5)] hidden">
@@ -76,6 +76,9 @@
             const seed = new Date().toDateString();
             
             const prompt = `Agisci come Freakbait. Genera una missione 'Urban Side Quest'. Deve essere caotica, surreale, legale e sicura.
+            Esempi: "Quando te ne stai per andare da casa di un amico inizia a salutare ma poi continua ad aggiungere commenti così che il saluto diventi sempre più lungo, finché devi trasferirti là",
+            "Chiama un amico e appena risponde dici "Scusami sono un po' occupato ora, ti richiamo più tardi" e chiudi il telefono",
+            "Avvicinati ad uno sconosciuto ed esclama "SEI TU! TI HO CERCATO OVUNQUE OGGI" e poi allontanati immediatamente"
             Rispondi SOLO con un JSON: {"main": "missione principale (max 12 parole)", "side": ["sub-quest 1", "sub-quest 2"]}. 
             Seed temporale: ${seed}. Lingua: Italiano.`;
 
